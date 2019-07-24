@@ -1,8 +1,27 @@
-<h1><%= @restaurant.name.capitalize %></h1>
+<main class="restaurant-show">
+  <div class="container">
+    <nav>
+      <i class="fas fa-angle-left"></i><%= link_to "Back to all restaurants", restaurants_path, class: "btn-back" %>
+    </nav>
 
-<div class="container">
-  <div class="box">
-    <h2>I haz your code bwahahah</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, rerum? Consectetur sint modi id rem officia explicabo aspernatur cum repellat, impedit architecto, molestiae culpa omnis, quam possimus voluptatum dolorem quis!</p>
+    <h1><%= @restaurant.name.capitalize %></h1>
+    <p><span class="label">Address</span><%= @restaurant.address %></p>
+    <p><span class="label">Phone</span><%= @restaurant.phone_number %></p>
+    <p><span class="label">Category</span><%= @restaurant.category %></p>
+    <%= link_to "Edit", edit_restaurant_path(@restaurant) %>
+
+    <hr>
+
+    <h2>Reviews</h2>
+    <%= link_to "Add a review", new_restaurant_review_path(@restaurant) %>
+    <ul>
+      <% @restaurant.reviews.each do |review| %>
+      <li>
+        <%= review.content %>
+        <%= review.rating %>
+      </li>
+      <% end %>
+    </ul>
   </div>
-</div>
+</main>
+
