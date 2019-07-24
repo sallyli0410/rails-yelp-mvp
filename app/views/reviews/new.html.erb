@@ -1,7 +1,13 @@
-<h1>Write A Review</h1>
-<%= simple_form_for [@restaurant, @review] do |f| %>
-<%= f.input :content %>
-<%= f.input :rating, collection: [0,1,2,3,4,5] %>
-<%= f.submit "Submit Your Review" %>
-<% end %>
-
+<div class="container">
+    <h1 class="my-3 text-center text-primary">Write A Review</h1>
+    <%= simple_form_for [@restaurant, @review] do |f| %>
+        <div>
+            <%= f.input :content, placeholder:"Write your review here" %>
+            <%= f.input :rating, collection: [0,1,2,3,4,5] %>
+        </div>
+        <div class="buttons">
+            <%= f.submit "Submit Your Review", class:"btn btn-primary mx-5" %>
+            <input type="reset", class="btn btn-light">
+        </div>
+    <% end %>
+</div>
