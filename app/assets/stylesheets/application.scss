@@ -37,3 +37,26 @@
   font-weight: bold;
   background: hotpink;
 }
+
+main {
+  margin-top: 20px;
+}
+
+.restaurant-show nav {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-back {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.label {
+  &:after {
+    content: ':';
+    display: inline-block;
+  }
+  margin-right: 5px;
+}
