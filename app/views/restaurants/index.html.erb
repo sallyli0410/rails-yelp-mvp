@@ -1,0 +1,19 @@
+<h1>Restaurants</h1>
+
+
+<div class="container">
+  <div class="row">
+    <% @restaurants.each do |restaurant| %>
+    <div class="col-4 p-0">
+    <div class="card-category p-10 m-2 rounded" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1502301103665-0b95cc738daf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80)">
+     <h2><%= restaurant.name.capitalize %></h2>
+     <p><%= restaurant.address %></p>
+     <p><%= restaurant.phone_number %></p>
+   </div>
+ </div>
+   <% end %>
+ </div>
+</div>
+
+
+
