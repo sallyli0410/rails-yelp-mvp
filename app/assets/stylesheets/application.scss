@@ -29,11 +29,27 @@
 
 .card-category{
   color: white;
-  height: 120px;
+  height: 200px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 7px;
+
 }
 
 .box {
   font-size: 24px;
   font-weight: bold;
   background: hotpink;
+
+}
+
+.rest_button input{
+background-color: black;
+color: white;
+border-style: none;
+border-radius: 5px;
+padding: 10px 15px;
+font-size: 14px;
+font-weight: bold;
+box-shadow: 10px 0px 10px 0px rgba(237,237,237,1);
 }
